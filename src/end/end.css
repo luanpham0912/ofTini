@@ -1,0 +1,64 @@
+.End{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: #f8e4ca; /*CAPE HONEY*/
+}
+.outtro1, .outtro2{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+}
+.outtro1{
+    transform: scale(1);
+    animation: Daylennao 1s ease infinite;
+}
+@keyframes Daylennao {
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(0.7);
+    }
+    20%{
+        transform: scale(0.9);
+    }
+    25%{
+        transform: scale(0.8);
+    }
+    55%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+.endContent {
+    
+}
+
+.outtro2{
+    animation: xoay 2s linear infinite;
+    transform: rotate(0);
+}
+
+@keyframes xoay {
+    0%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}

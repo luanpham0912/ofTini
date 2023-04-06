@@ -1,0 +1,107 @@
+.contain {
+    background-image: linear-gradient(to right, #31509433, #35754a33);
+    
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+}
+.content h1{
+    font-size: 100px;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    
+    
+
+}
+.content p {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: x-large;
+    color: #fbf0e0;
+    font-weight: 500;
+    letter-spacing: 4px;
+    border-right: 5px solid transparent;
+ 
+    animation: typing 6s steps(48) backwards,
+    cursor .2s step-end infinite alternate;
+    animation-delay: 1.5s;
+}
+
+@keyframes typing {
+    0% {width : 0}
+}
+@keyframes cursor {
+    50% {
+        border-color: #fff;
+    }
+}
+.content button{
+    font-family: sans-serif;
+    display: block;
+    border-radius: 15px;
+    background: transparent;
+    border: 1px solid #edb7a3;
+    padding: 5px 10px;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #edb7a3;
+    font-weight: 500;
+    outline: none;
+    transition: all .5s;
+}
+.content button:hover{
+    background-color: #edb7a3 ;
+    color: #fff;
+    border-color: #fff;
+}
+.menu .avatar{
+    position: relative;
+    width: 200px; height : 200px ; border-radius : 50%;
+
+    top: 100px;
+    left: 10%;
+    animation: ping 4s linear infinite;
+}
+@keyframes ping {
+    50% {
+        top: 80px;
+        
+    }
+
+}
+.video-background{
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    object-fit: cover;
+ 
+}
+
+@media screen and (max-width : 768px){
+    .video-background{
+       object-position: right bottom;
+    }
+    .content{
+        width: 90%;
+        top : 45%
+    }
+    .content h1{
+        font-size: 60px;
+    }
+    .content p{
+
+        font-size: 15px ;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+}
