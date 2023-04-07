@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history';
 import home from './Main/home';
-// import Menu from './menu/menu';
+import Menu from './menu/menu';
 import bake from './bake/bake';
 import flower from './flower/flower';
 import message from './message/message';
@@ -11,7 +11,7 @@ import End from './end/End';
 import React, { Suspense, useEffect, useState } from 'react';
 import Home from './Main/home';
 import Bake from './bake/bake';
-const OtherComponent = React.lazy(() => import('./menu/menu'));
+// const OtherComponent = React.lazy(() => import('./menu/menu'));
 
 
 export const history = createBrowserHistory()
@@ -50,12 +50,7 @@ function App() {
       }} />
       <Route exact path='/menu' render={(propsRoute) => {
         return <>
-
-
-          <Suspense fallback={<div style={{fontSize : "100px"}}>Loading...</div>}>
-
-            <OtherComponent />
-          </Suspense>
+              <Menu/>
         </>
       }} />
       <Route exact path='/bake' render={(propsRoute) => {
