@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
 import Axios from 'axios'
 import { history } from '../App'
@@ -14,15 +14,20 @@ export default function Home(props) {
     taiKhoan : 'yanghomang',
     matKhau : '26/02'
   })
-
+  const timerID = useRef()
 
   const handleSubmit = (e) =>{
     e.preventDefault()
     if(acc.taiKhoan === myAcc.taiKhoan && acc.matKhau === myAcc.matKhau){
       console.log("true")
       localStorage.setItem("TOKEN" , "anhnhoemlam")
-      props.toggle()
       history.push('/menu')
+      if(timerID.current){
+          clearTimeout(timerID.current)
+      }
+      timerID.current = setTimeout(()=>{
+        props.toggle()
+      },500)
     }else{
       console.log("false")
       Notificantion("error","Thử trả lời lại đáp án khác nha :v")
