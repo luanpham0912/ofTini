@@ -8,15 +8,19 @@ export default function Menu() {
   if(!localStorage.getItem("TOKEN")){
     return <Redirect to = "/"/>
 }
-  
+  const videoPlay = (e) =>{
+    console.log(e)
+    document.getElementById("videoBack").play()
+  }
 
   return (
-    <div className='w-100 contain'>
+    <div className='w-100 contain' onMouseOver={
+      videoPlay
+    }>
       
-      <video autoPlay muted loop preload='none' className='video-background'>
+      <video  muted loop preload='metadata' className='video-background' id='videoBack'>
         <source src='./img/videoback.mp4' type='video/mp4'/>
       </video>
-
       <div className='content'>
          <h1>Helu, Welcome to my Gift </h1>
          <p>Many interesting things are waiting for you :D</p>
