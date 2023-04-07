@@ -43,7 +43,7 @@
     width: 500px;
 }
 .Chung{
-    left : 60%;
+    left : 100%;
     width: 168px;
     transform: scaleX(-1) rotate(0);
     animation: Luanmove 4s ease-out forwards,
@@ -56,7 +56,7 @@
         left : 100%;
     }
     100%{
-        left : 35%;
+        left : 45%;
     }
 }
 

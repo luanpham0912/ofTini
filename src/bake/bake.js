@@ -39,6 +39,7 @@ export default function Bake(props) {
         audio.addEventListener('ended', () => setPlaying(false));
         audio.pause()
         return () => {
+          
             audio.removeEventListener('ended', () => setPlaying(false));
             audio.pause()
         };
