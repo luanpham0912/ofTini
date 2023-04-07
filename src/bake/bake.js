@@ -3,7 +3,8 @@ import './bake.css'
 import { SoundOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import { Switch } from 'antd';
 import { history } from '../App';
-export default function Bake() {
+import { Redirect } from 'react-router-dom';
+export default function Bake(props) {
     const [first, setfirst] = useState(true)
     const [second, setsecond] = useState(true)
     const dev = useRef()
@@ -43,7 +44,9 @@ export default function Bake() {
         };
     }, []);
 
-
+    if(!localStorage.getItem("TOKEN")){
+        return <Redirect to = "/"/>
+  }
 
 
     return (
@@ -217,7 +220,10 @@ export default function Bake() {
                 </div>
 
                 <div className='nhac col-12 col-md-6'>
-                    <button className='onoffnhac' onClick={toggle}>{playing ? "pause" : "play"}</button>
+                    <button className='onoffnhac' onClick={()=>{
+                        toggle()
+                        props.toggle()
+                    }}>{playing ? "pause" : "play"}</button>
                     <audio id="autoplay">
                         <source src="./img/chistmass.mp3" />
                     </audio>

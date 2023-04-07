@@ -10,7 +10,7 @@ export default function Roll() {
         spins++;
         console.log("first",spins)
         // var randDegree = Math.floor(Math.random() * 1800) + 1;
-    var totalDegree = 360*5 + deg;
+    var totalDegree = 360*8 + deg;
         setDeg( totalDegree )
         setTimeout(()=>{
             setFlag(false)
@@ -48,7 +48,7 @@ export default function Roll() {
                                 <span className='b-day ' >Travel around TW</span>
                             </div>
                             <div className='section'>
-                                <span className='b-day'>Penthouse in Dalat</span>
+                                <span className='b-day'>Penthouse Dalat</span>
 
 
                             </div>
@@ -62,14 +62,14 @@ export default function Roll() {
             </div>
             <div className='popupGift' style={{display : flag ? "none" : "block"}}>
                 <h1>Chúc mừng bạn đã trúng được phần quà là Mystery box</h1>
-                <p>
+                <div>
                 Mystery box của năm nay là 1 vé Vip bên mình :D.
                 Với vé Vip này bạn có thể yêu cầu bất cứ thứ gì từ Luan, chỉ cần nằm trong khả năng là được
-                <small style={{display:"block"}}>(vd: tìm người chạy deadline cùng, tìm người thảo luận các vấn đề về học thuật, đời sống, tìm người đi xem phim cùng, đi hít khói đếm đèn đường cùng,...vv)</small>
-                Để sử dụng quà bạn hãy gửi đoạn code bên dưới gửi chatbox của Luan 
+                <small style={{display:"block"}}>(vd: Tìm người chạy deadline cùng, tìm người thảo luận các vấn đề về học thuật, đời sống, tìm người đi xem phim, đi hít khói đếm đèn đường cùng,...vv)</small>
+                <p style={{fontWeight : "600",marginTop :"15px"}} > Để sử dụng vé bạn hãy gửi đoạn code bên dưới vào chatbox của Luan kèm điều bạn muốn</p>
                 <p> HSD : không giới hạn , cho đến khi phá sản.</p>
                 <i style={{fontSize:"12px"}}>Lưu ý : Vé chỉ áp dụng được 1 lần duy nhất</i>
-                </p>
+                </div>
                 <div className='code'>2113</div>
             </div>
             <button className='nextFlower' onClick={() => {
@@ -78,61 +78,3 @@ export default function Roll() {
         </div>
     )
 }
-// .outer-container
-// h1.wish - Wishing you -
-// .container
-//   .arrow
-//   .wheel
-//     .inner-wheel#wheel
-//       .section
-//         span.b-day Happy Birthday!
-//       .section
-//         span.vertical.joy O
-//       .section#love
-//         span.fa.fa-heart.pulse
-//       .section
-//         span.adventure New Adventures
-//       .section
-//         span.vertical.fun U
-//       .section
-//         span.lots lots of
-//         span.fa.fa-birthday-cake
-//     .spin-button
-// .overlay
-// h1
-//   | I love
-//   br
-//   | you berrrry
-//   br
-//   | much
-// .cherry-container-1
-//   .cherry
-//     .leaf
-// .cherry-container-2
-//   .cherry
-//     .leaf
-// .cherry-container-3
-//   .cherry
-//     .leaf
-// .cherry-container-4
-//   .cherry
-//     .leaf
-// .cherry-container-5
-//   .cherry
-//     .leaf
-// .cherry-container-6
-//   .cherry
-//     .leaf
-// .cherry-container-7
-//   .cherry
-//     .leaf
-
-// .cherry-container-8
-//   .cherry
-//     .leaf
-
-// .cherry-container-9
-//   .cherry
-//     .leaf
-
-

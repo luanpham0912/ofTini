@@ -1,11 +1,16 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
+import { history } from '../App'
 import './end.css'
 export default function End() {
+    if(!localStorage.getItem("TOKEN")){
+        return <Redirect to = "/"/>
+  }
     return (
         <div className='End'>
            
                 <div className='endContent'>
-                <h1>Hết Gòi :D </h1>
+                <h1>Hết Gòi :v </h1>
                 <p className='mb-0'>Mong là những thứ nhỏ nhặt này sẽ làm bạn cười :v</p>
                 <img src='./img/end.jpg' style={{width : "200px", height : "200px" , objectFit :"cover" ,objectPosition : "left 25%" , borderRadius : "50%"}}/>
                 
@@ -18,7 +23,9 @@ export default function End() {
                 <video muted loop autoPlay className='outtro1'>
                     <source src='./img/outro1.mp4' />
                 </video>
-           
-        </div>
+                <button className='back' onClick={()=>{
+                    history.push('./menu')
+                }}>Muốn quay trở lại từ đầu thì bấm ở đây</button>
+        </div>  
     )
 }

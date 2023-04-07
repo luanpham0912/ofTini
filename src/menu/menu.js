@@ -1,23 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import { history } from '../App'
 import './menu.css'
 
-export default function menu() {
+export default function Menu() {
+
+  if(!localStorage.getItem("TOKEN")){
+    return <Redirect to = "/"/>
+}
+
   return (
     <div className='w-100 contain'>
       <video autoPlay muted loop className='video-background'>
         <source src='./img/videoback.mp4' />
       </video>
-      {/* <div className='container-fluid menu'>
-        <div className='row intro'>
-          <div className='col-12 col-md-5'>
-            <p>Helu , Welcome to my present :D , Let enjoy it </p>
-          </div>
-          <div className='col-12 col-md-7'>
-            <img className='avatar' src='./img/backr.jpg' alt='avatar' />
-          </div>
-        </div>
-      </div> */}
+
       <div className='content'>
          <h1>Helu, Welcome to my Gift </h1>
          <p>Many interesting things are waiting for you :D</p>

@@ -1,43 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css'
 import Axios from 'axios'
 import { history } from '../App'
 import { Notificantion, openNotification } from '../notification/notiFunc'
 import { Alert, Button, notification } from 'antd'
-export default function Home() {
-  const [api, contextHolder] = notification.useNotification();
-  const openNotificationWithIcon = (type) => {
-    api[type]({
-      message: 'Notification Title',
-      description:
-        'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-    });
-  };
+export default function Home(props) {
+
   const [acc, setAcc] = useState({
     taiKhoan : '',
     matKhau : ''
   })
-  console.log( acc)
+  const [myAcc] = useState({
+    taiKhoan : 'yanghomang',
+    matKhau : '26/02'
+  })
+
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    let promise = Axios({
-        url : `https://movieapi.cyberlearn.vn/api/QuanLyNguoiDung/DangNhap`,
-        method : 'POST',
-        data : {...acc}
-    })
-    promise.then((res)=>{
-      console.log("res",res)
-      if(res.status === 200){
-         localStorage.setItem("TOKEN" , res.data.content.accessToken)
-         history.push('/menu')
-      }
-    })
-    promise.catch((err)=>{
-      console.log(err.response)
+    if(acc.taiKhoan === myAcc.taiKhoan && acc.matKhau === myAcc.matKhau){
+      console.log("true")
+      localStorage.setItem("TOKEN" , "anhnhoemlam")
+      props.toggle()
+      history.push('/menu')
+    }else{
+      console.log("false")
       Notificantion("error","Thử trả lời lại đáp án khác nha :v")
-
-    })
+    }
+   
   }
   const handleChange = (e) =>{
      const {name , value} = e.target

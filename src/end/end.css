@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 .End{
+    font-family: 'Indie Flower', cursive !important;
+    font-weight: bold;
     position: relative;
     width: 100%;
     height: auto;
@@ -61,4 +66,12 @@
     100%{
         transform: rotate(10deg);
     }
+}
+.back {
+    display: block;
+    margin: 10px auto ;
+    padding : 15px 25px; 
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: bold;
 }

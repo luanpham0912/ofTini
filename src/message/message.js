@@ -2,17 +2,16 @@ import React, { useRef, useState } from 'react'
 import { history } from '../App'
 import { ArrowRightOutlined } from '@ant-design/icons';
 import './message.css'
+import { Redirect } from 'react-router-dom';
 let script = `hmmm,..
 Để xem nào...Chúc mừng sinh nhật nhé !
 Chúc cho những năm tháng sau này luôn
 hạnh phúc, một đời an yên.
 Mong là vũ trụ sẽ luôn đối đãi dịu 
 dàng với cậu. Cũng mong là tôi 
-vẫn có thể chúc mừng cậu năm cậu 25 Happy Birthday, Yanghomang!
-Luan`;
+vẫn có thể chúc mừng cậu năm cậu 25. Happy Birthday, Yanghomang!
+Luan..`;
 export default function Message() {
-    console.log("first")
-    let counter = useRef(0);
     let intervalID = useRef(null)
     console.log("intervalID", intervalID)
     const [content, setContent] = useState(0)
@@ -42,10 +41,12 @@ export default function Message() {
             // console.log("123")
             setContent(prevCount => prevCount + 1)
 
-        }, 90);
+        }, 150);
     }
 
-
+    if(!localStorage.getItem("TOKEN")){
+        return <Redirect to = "/"/>
+  } 
     return (
         <div className='message'>
             <p className='text-center p-5'>My birthday card (Click or hover to open it)</p>

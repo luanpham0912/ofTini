@@ -1,7 +1,11 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import { history } from '../App'
 import './flower.css'
 export default function Flower() {
+  if(!localStorage.getItem("TOKEN")){
+    return <Redirect to = "/"/>
+}
   return (
     <div className='Flower' >
           <div className='contentFlower'>
