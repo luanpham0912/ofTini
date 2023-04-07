@@ -8,9 +8,11 @@ export default function Menu() {
   if(!localStorage.getItem("TOKEN")){
     return <Redirect to = "/"/>
 }
+  
 
   return (
     <div className='w-100 contain'>
+      
       <video autoPlay muted loop playsInline className='video-background'>
         <source src='./img/videoback.mp4' type='video/mp4'/>
       </video>

@@ -1,7 +1,8 @@
 .contain {
-    background-image: linear-gradient(to right, #31509433, #35754a33);
+    /* background-image: linear-gradient(to right, #31509433, #35754a33); */
     
 }
+
 .content {
     position: absolute;
     top: 50%;
