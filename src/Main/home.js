@@ -27,7 +27,7 @@ export default function Home(props) {
       }
       timerID.current = setTimeout(()=>{
         props.toggle()
-      },500)
+      },1000)
     }else{
       console.log("false")
       Notificantion("error","Thử trả lời lại đáp án khác nha :v")
