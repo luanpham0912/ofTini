@@ -5,11 +5,12 @@ import { Switch } from 'antd';
 import { history } from '../App';
 import { Redirect } from 'react-router-dom';
 export default function Bake(props) {
+    console.log(props.playing)
     const [first, setfirst] = useState(true)
     const [second, setsecond] = useState(true)
     const dev = useRef()
     const handleChangeSwitch = (c, e) => {
-        console.log(c, e)
+       
         setfirst(false)
         if (!first) {
             if (dev.current) {
@@ -222,16 +223,26 @@ export default function Bake(props) {
 
                 <div className='nhac col-12 col-md-6'>
                     <button className='onoffnhac' onClick={()=>{
-                        toggle()
-                        props.toggle()
+                        if(!props.playing){
+                            toggle()
+                        }else{
+                            toggle()
+                            props.toggle()
+                        }
+                        
+                 
                     }}>{playing ? "pause" : "play"}</button>
                     <audio id="autoplay">
                         <source src="./img/chistmass.mp3" />
                     </audio>
-                    <p>Không chê tôi hát dở thì bấm vào loa <br /> tôi hát HPBD cho bạn nghe :D </p>
+                    <p>Không chê tôi hát dở thì bấm play<br /> tôi hát HPBD cho bạn nghe :D </p>
                 </div>
             </div>
             <div className='nextFlower' onClick={() => {
+                if(!props.playing){
+                    props.toggle()
+
+                }
                 history.push("/flower")
             }}>Continute..</div>
         </div>

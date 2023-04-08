@@ -20,7 +20,11 @@ function App() {
     const [audio] = useState(new Audio(url));
     const [playing, setPlaying] = useState(false);
 
-    const toggle = () => setPlaying(!playing);
+    const toggle = () => {
+      
+        setPlaying(!playing);
+
+    }
 
     useEffect(() => {
       playing ? audio.play() : audio.pause();
@@ -56,7 +60,7 @@ function App() {
       <Route exact path='/bake' render={(propsRoute) => {
         return <>
 
-          <Bake toggle={toggle} />
+          <Bake toggle={toggle} playing={playing}/>
         </>
       }} />
       <Route exact path='/flower' component={flower} />

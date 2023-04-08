@@ -65,7 +65,7 @@ export default function Roll() {
                 <div>
                 Mystery box của năm nay là 1 vé Vip bên mình :D.
                 Với vé Vip này bạn có thể yêu cầu bất cứ thứ gì từ Luan, chỉ cần nằm trong khả năng là được
-                <small style={{display:"block"}}>(vd: Tìm người chạy deadline cùng, tìm người thảo luận các vấn đề về học thuật, đời sống, tìm người đi xem phim, đi hít khói đếm đèn đường cùng,...vv)</small>
+                <small style={{display:"block"}}>(vd: Cần tìm người chạy deadline cùng, tìm người thảo luận các vấn đề về học thuật, đời sống, tìm người đi đâu đó cùng như đi xem phim, đi hít khói đếm đèn đường cùng,...vv)</small>
                 <p style={{fontWeight : "600",marginTop :"15px"}} > Để sử dụng vé bạn hãy gửi đoạn code bên dưới vào chatbox của Luan kèm điều bạn muốn</p>
                 <p> HSD : không giới hạn , cho đến khi phá sản.</p>
                 <i style={{fontSize:"12px"}}>Lưu ý : Vé chỉ áp dụng được 1 lần duy nhất</i>
