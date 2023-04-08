@@ -12,7 +12,7 @@ export default function Menu() {
   return (
     <div className='w-100 contain'>
       
-      <video  muted loop autoPlay className='video-background' id='videoBack'>
+      <video  muted loop autoPlay playsInline className='video-background' id='videoBack'>
         <source src='./img/videoback.mp4' type='video/mp4'/>
       </video>
       <div className='content'>

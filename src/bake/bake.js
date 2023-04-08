@@ -50,7 +50,7 @@ export default function Bake(props) {
         return <Redirect to = "/"/>
   }
 
-
+    
     return (
         <div className='bake container-fluid' style={{ backgroundColor: first ? "#ee9ca7" : "#000" }}>
             <div className="velas">
