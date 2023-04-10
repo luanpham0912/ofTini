@@ -213,7 +213,7 @@ button:focus {
 
 @media screen and (max-width: 768px) {
     .text h1{
-      font-size: 24px;
+      font-size: 20px;
       
     }
     .bake{
@@ -239,5 +239,9 @@ button:focus {
       50% {
         opacity: 0.7;
       }
+    }
+    .bakeNext{
+      top: 0%;
+      bottom: unset;
     }
 }

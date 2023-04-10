@@ -238,7 +238,7 @@ export default function Bake(props) {
                     <p>Không chê tôi hát dở thì bấm play<br /> tôi hát HPBD cho bạn nghe :D </p>
                 </div>
             </div>
-            <div className='nextFlower' onClick={() => {
+            <div className='nextFlower bakeNext' onClick={() => {
                 if(!props.playing){
                     props.toggle()
 

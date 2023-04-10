@@ -10,22 +10,21 @@ export default function End() {
         <div className='End'>
            
                 <div className='endContent'>
-                <h1>Hết Gòi :v </h1>
-                <p className='mb-0'>Mong là những thứ nhỏ nhặt này sẽ làm bạn cười :v</p>
+                <p className='mb-0 pt-2'>Mong là những thứ nhỏ nhặt này sẽ làm bạn cười :v</p>
                 <img src='./img/end.jpg' style={{width : "200px", height : "200px" , objectFit :"cover" ,objectPosition : "left 25%" , borderRadius : "50%"}}/>
                 
                 </div>
-                <p  className='mb-0'>Mãi dễ thương như vầy nha :</p>
+                <p  className='mb-0'>Mãi dễ thương như vầy nữa</p>
                 <video muted loop autoPlay className='outtro2'>
                     <source src='./img/outtro.mp4' />
                 </video>
-                <p  className='mb-0'>Và có 1 ngày sinh nhật thật rực rỡ. Dẫy lên nào :vv</p>
+                <p  className='mb-0'>Có 1 ngày sinh nhật thật rực rỡ. Dẫy lên nào :vv</p>
                 <video muted loop autoPlay className='outtro1'>
                     <source src='./img/outro1.mp4' />
                 </video>
                 <button className='back' onClick={()=>{
                     history.push('./menu')
-                }}>Muốn quay trở lại từ đầu thì bấm ở đây</button>
+                }}>    <h1>Hết Gòi :v</h1> Muốn quay trở lại từ đầu thì bấm ở đây</button>
         </div>  
     )
 }

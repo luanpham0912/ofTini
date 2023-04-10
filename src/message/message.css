@@ -117,7 +117,7 @@ h4 {
 	font-size: 15px;
     letter-spacing: 2px;
 	line-height: 20px;
-	transform: rotate(-2deg);
+	/* transform: rotate(-2deg); */
 	padding: 0 10px;
 }
 

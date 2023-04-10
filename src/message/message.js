@@ -5,10 +5,9 @@ import './message.css'
 import { Redirect } from 'react-router-dom';
 let script = `hmmm,..
 Để xem nào...Chúc mừng sinh nhật nhé !
-Chúc cho những năm tháng sau này luôn
-hạnh phúc, một đời an yên.
-Mong là vũ trụ sẽ luôn đối đãi dịu 
-dàng với cậu. Cũng mong là tôi 
+Chúc cậu những năm tháng sau này luôn
+hạnh phúc, có một đời an yên.
+Mong là vũ trụ sẽ đối đãi dịu dàng với cậu. Cũng mong là tôi 
 vẫn có thể chúc mừng cậu năm cậu 25. Happy Birthday, Yanghomang!
 Luan..`;
 export default function Message() {
@@ -26,7 +25,11 @@ export default function Message() {
     const play = () => {
         if(content > script.length){
             console.log(1123123123123)
+            clearInterval(intervalID.current);
+
         }
+
+       
 
         intervalID.current = setInterval(() => {
             // counter.current += 1;
@@ -41,7 +44,7 @@ export default function Message() {
             // console.log("123")
             setContent(prevCount => prevCount + 1)
 
-        }, 150);
+        }, 90);
     }
 
     if(!localStorage.getItem("TOKEN")){
@@ -49,7 +52,7 @@ export default function Message() {
   } 
     return (
         <div className='message'>
-            <p className='text-center p-5'>My birthday card (Click or hover to open it)</p>
+            <p className='text-center p-5'>(Click or hover to open/close it)</p>
             <div className="card" onMouseEnter={()=>{play()}} onMouseLeave={()=>{pause()}}>
                 <div className="imgBox">
                     <div className="bark" />

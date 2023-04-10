@@ -87,8 +87,13 @@
     opacity: 0;
     animation: showH1 1s forwards;
     animation-delay: 4s;
-}
 
+}
+.thu{
+    position: relative;
+    width: 100px;
+    right: 15px;
+}
 @media screen and (max-width : 768px) {
     .Ni{
        left: -23%;
