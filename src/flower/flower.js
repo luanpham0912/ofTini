@@ -9,7 +9,7 @@ export default function Flower() {
   return (
     <div className='Flower' >
           <div className='contentFlower'>
-          <h1>Tặng bạn bó hoa nè</h1>
+          <h1>Tặng bạn bó hoa</h1>
           <img src='./img/flowerr.png' alt='My' className='Ni'/>
           <img src='./img/love2.png' alt='Me' className='Chung'/>
           </div>

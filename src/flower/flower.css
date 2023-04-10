@@ -94,6 +94,16 @@
     width: 100px;
     right: 15px;
 }
+.flowerNext::before{
+    content: "Thử bấm để nhận ->";
+    position: absolute;
+    top: -50px;
+    right: 95px;
+    width: 250px;
+ 
+
+   
+}
 @media screen and (max-width : 768px) {
     .Ni{
        left: -23%;
@@ -112,7 +122,7 @@
     }
     .Flower .flowerNext{
         font-size: 20px;
-        bottom: 90%;
+        bottom: 85%;
 
     }
 }

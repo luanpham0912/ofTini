@@ -44,7 +44,7 @@ export default function Message() {
             // console.log("123")
             setContent(prevCount => prevCount + 1)
 
-        }, 90);
+        }, 110);
     }
 
     if(!localStorage.getItem("TOKEN")){
