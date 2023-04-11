@@ -4,15 +4,18 @@ import { history } from '../App'
 import './menu.css'
 
 export default function Menu() {
-
+  useEffect(() => {
+      document.getElementById("videoBack").play()
+  }, [])
+  
   if(!localStorage.getItem("TOKEN")){
     return <Redirect to = "/"/>
 }
-
+  
   return (
     <div className='w-100 contain'>
       
-      <video  muted loop autoPlay playsInline className='video-background' id='videoBack'>
+      <video  muted loop playsInline className='video-background' id='videoBack'>
         <source src='./img/videoback.mp4' type='video/mp4'/>
       </video>
       <div className='content'>
