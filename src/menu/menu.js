@@ -15,7 +15,7 @@ export default function Menu() {
   return (
     <div className='w-100 contain'>
       
-      <video preload='none' muted loop playsInline className='video-background' id='videoBack'>
+      <video preload='metadata' muted loop playsInline className='video-background' id='videoBack'>
         <source src='./img/videoback.mp4' type='video/mp4'/>
       </video>
       <div className='content'>
