@@ -70,7 +70,7 @@ export default function Roll() {
                 <p> HSD : không giới hạn , cho đến khi phá sản.</p>
                 <i style={{fontSize:"12px"}}>Lưu ý : Vé chỉ áp dụng được 1 lần duy nhất</i>
                 </div>
-                <div className='code'>2113</div>
+                <div className='code'>2812</div>
             </div>
             <button className='nextFlower' onClick={() => {
                 history.push("/end")

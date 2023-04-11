@@ -95,7 +95,8 @@
     right: 15px;
 }
 .flowerNext::before{
-    content: "Thử bấm để nhận -";
+    content: "Birthday card của bạn -";
+    font-size: x-large;
     position: absolute;
     top: -50px;
     right: 110px;
@@ -126,8 +127,8 @@
 
  
     }
-    .flowerNext::before{
-        right: 80px;
+    /* .flowerNext::before{
+        right: 110px;
        
-    }
+    } */
 }
