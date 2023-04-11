@@ -5,17 +5,15 @@ import './message.css'
 import { Redirect } from 'react-router-dom';
 let script = `hmmm,..
 Để xem nào...Chúc mừng sinh nhật nhé !
-Chúc cậu những năm tháng sau này luôn
-hạnh phúc, có một đời an yên.
+Chúc cậu những năm tháng của sau này luôn
+hạnh phúc, một đời an yên.
 Mong là vũ trụ sẽ đối đãi dịu dàng với cậu. Cũng mong là tôi 
 vẫn có thể chúc mừng cậu năm cậu 25. Happy Birthday, Yanghomang!
 Luan..`;
 export default function Message() {
     let intervalID = useRef(null)
-    console.log("intervalID", intervalID)
+ 
     const [content, setContent] = useState(0)
-
-    console.log("nount", content)
     const pause = () =>{
         clearInterval(intervalID.current);
     }

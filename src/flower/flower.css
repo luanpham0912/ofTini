@@ -95,10 +95,10 @@
     right: 15px;
 }
 .flowerNext::before{
-    content: "Thử bấm để nhận ->";
+    content: "Thử bấm để nhận -";
     position: absolute;
     top: -50px;
-    right: 95px;
+    right: 110px;
     width: 250px;
  
 
@@ -124,5 +124,10 @@
         font-size: 20px;
         bottom: 85%;
 
+ 
+    }
+    .flowerNext::before{
+        right: 80px;
+       
     }
 }
