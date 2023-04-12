@@ -3,13 +3,11 @@ import { history } from '../App'
 import { ArrowRightOutlined } from '@ant-design/icons';
 import './message.css'
 import { Redirect } from 'react-router-dom';
-let script = `hmmm,..
-Để xem nào...Chúc mừng sinh nhật nhé !
-Chúc cậu những năm tháng của sau này luôn
-hạnh phúc, một đời an yên.
-Mong là vũ trụ sẽ đối đãi dịu dàng với cậu. Cũng mong là tôi 
+let script = `Hmmm,...Để xem nào...Chúc mừng sinh nhật nhé !
+Chúc cậu những năm tháng của sau này luôn hạnh phúc, một đời an yên. 
+Mong là vũ trụ sẽ đối đãi dịu dàng hơn với cậu. Cũng mong là tôi 
 vẫn có thể chúc mừng cậu năm cậu 25. Happy Birthday, Yanghomang!
-Luan..`;
+- Luan - `;
 export default function Message() {
     let intervalID = useRef(null)
  
