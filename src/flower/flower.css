@@ -95,12 +95,12 @@
     right: 15px;
 }
 .flowerNext::before{
-    content: "Birthday card của bạn -";
+    content: "Birthday card -";
     font-size: x-large;
     position: absolute;
     top: -50px;
     right: 110px;
-    width: 250px;
+    width: 180px;
  
 
    

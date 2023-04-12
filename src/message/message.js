@@ -50,7 +50,7 @@ export default function Message() {
   } 
     return (
         <div className='message'>
-            <p className='text-center p-5'>(Click or hover to open/close it)</p>
+            <p className='text-center p-5 title'>(Click or hover to open/close it)</p>
             <div className="card" onMouseEnter={()=>{play()}} onMouseLeave={()=>{pause()}}>
                 <div className="imgBox">
                     <div className="bark" />
